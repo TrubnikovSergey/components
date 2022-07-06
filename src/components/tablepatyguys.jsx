@@ -23,16 +23,16 @@ const TablePatyGuys = () => {
 
     const users = guys
                     .map(user => {
-                        return (
-                            <tr>
-                                <td>{user.name}</td>
-                                <td>{qualitiesList(user.qualities)}</td>
-                                <td>{user.profession.name}</td>
-                                <td>{user.completedMeetings}</td>
-                                <td>{user.rate}/5</td>
-                                <td><button type = "button" className = "btn btn-danger badge m-2" onClick={() => handlerDeletGuy(user._id)}>delete</button></td>
-                            </tr>
-                        )
+
+                        return  <tr key = {user._id}>
+                                    <td>{user.name}</td>
+                                    <td>{qualitiesList(user.qualities)}</td>
+                                    <td>{user.profession.name}</td>
+                                    <td>{user.completedMeetings}</td>
+                                    <td>{user.rate}/5</td>
+                                    <td><button type = "button" className = "btn btn-danger badge m-2" onClick={() => handlerDeletGuy(user._id)}>delete</button></td>
+                                </tr>
+
                     })
 
     const thead =   <thead>
