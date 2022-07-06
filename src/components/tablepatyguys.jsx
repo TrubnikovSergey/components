@@ -5,12 +5,12 @@ const TablePatyGuys = () => {
 
     const [guys, setGuys] = useState(API.users.fetchAll())
 
-    const qualitiesList = (qList) => {
+    const qualitiesList = (qList, id) => {
 
-        const list = qList.map(item => {
+        const list = qList.map((item, i) => {
     
             const classes = `m-2 badge bg-${item.color}`    
-            return <span className = {classes}>{item.name}</span>
+            return <span key = {id + i} className = {classes}>{item.name}</span>
 
         })
     
@@ -26,7 +26,7 @@ const TablePatyGuys = () => {
 
                         return  <tr key = {user._id}>
                                     <td>{user.name}</td>
-                                    <td>{qualitiesList(user.qualities)}</td>
+                                    <td>{qualitiesList(user.qualities, user._id)}</td>
                                     <td>{user.profession.name}</td>
                                     <td>{user.completedMeetings}</td>
                                     <td>{user.rate}/5</td>
