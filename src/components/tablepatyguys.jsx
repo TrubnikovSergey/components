@@ -59,19 +59,24 @@ const TablePatyGuys = () => {
         const strCount = String(count)
         const lastNumber = Number(strCount[strCount.length - 1])
 
-        if(lastNumber === 1){
+        if(count === 1){
 
             return `${count} человек тусанет с тобой сегодня`
+        }
+
+        if(lastNumber === 1){
+
+            return `${count} человек тусанут с тобой сегодня`
         }
 
         if(count >= 5 && count <= 20) {
 
-            return `${count} человек тусанет с тобой сегодня`
+            return `${count} человек тусанут с тобой сегодня`
         }
 
         if(lastNumber === 2 || lastNumber === 3 || lastNumber === 4){
 
-            return `${count} человека тусанет с тобой сегодня`
+            return `${count} человека тусанут с тобой сегодня`
         }
 
     }
