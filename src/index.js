@@ -1,14 +1,16 @@
 import React from 'react'
-// import ReactDOM from 'react-dom'
+
 import { createRoot } from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.css'
-import Counter from './components/counter'
+import TablePatyGuys from './components/tablepatyguys';
 
 const container = document.querySelector('#root')
 const root = createRoot(container)
 
 const App = () => {
-    return <Counter/>
+
+    return <TablePatyGuys/>
+           
 }
 
 root.render(<App/>)
