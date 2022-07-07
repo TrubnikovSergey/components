@@ -18,7 +18,7 @@ const TablePatyGuys = () => {
     }
     
     const handlerDeletGuy = (id) => {
-        setGuys(guys.filter(guy => guy._id !== id))
+        setGuys((oldState) => oldState.filter(guy => guy._id !== id))
     }
 
     const users = guys
